@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong</title>
+
+    <script src="main.js" defer></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        .score{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background-color: #fff;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+            font-family: monospace, sans-serif;
+            position: absolute;
+            top: 0;
+        }
+        #canvas{
+            height: 70vh;
+            border: 0.5rem solid #fff;
+            color: #fff;
+            position: absolute;
+            bottom: 5%;
+        }
+        #start{
+            color: gray;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: 3rem;
+            font-family: monospace, sans-serif;
+            text-align: center;
+            background-color: rgb(248, 248, 248);
+            width: 6ch;
+            cursor: pointer;
+            z-index: 1; 
+        }
+        @media (max-width: 100rem) {
+            #canvas{
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="score">
+        <p>Score:<span id="score-p1">0</span>-<span id="score-p2">0</span></p>
+        <p>Bounces:<span id="score-bounces">0</span></p>
+    </div>
+    <div id="start">Start</div>
+    <canvas id="canvas" width="800" height="500">Canvas not supported.</canvas>
+</body>
+</html>
